@@ -20,14 +20,14 @@ export default function ChatBox() {
                     <p className="text-gray-600">Welcome to the chat room!</p>
                     <p>{
                         webSocketState.messages?.map((message) => {
-                            return (
+                            
                                 if(message.type === messageType.JOIN || message.type === messageType.LEAVE){
                                     count = message.onlineUser;
                                     
                                 }
                                 return "";
 
-                            )
+                            
                         })
                     }
                         Online persons : <strong>{count}</strong>
